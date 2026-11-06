@@ -1,12 +1,16 @@
-==============================================================================
-Problem: Intersection of Two Arrays II
-Link: https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
-Difficulty: Easy
-Topic: Array, Hash Table, Two Pointers, Binary Search, Sorting
-==============================================================================
+# Intersection of Two Arrays II
 
-[1] CÁCH CHẠY THUẬT TOÁN (MÔ TẢ TRỰC QUAN)
-------------------------------------------------------------------------------
+[LeetCode problem](https://leetcode.com/problems/intersection-of-two-arrays-ii/description/) | **Difficulty:** Easy  
+**Topics:** Array, Hash Table, Two Pointers, Binary Search, Sorting
+
+## Solution
+
+Xem lời giải Python tại [solution.py](solution.py).
+
+<details>
+<summary>Giải thích chi tiết</summary>
+
+## CÁCH CHẠY THUẬT TOÁN (MÔ TẢ TRỰC QUAN)
 Ý tưởng: Đếm tần suất các phần tử của mảng NHỎ hơn, rồi duyệt mảng LỚN,
 mỗi phần tử nếu "còn hàng trong kho" thì lấy và giảm tồn kho đi 1.
 
@@ -49,8 +53,7 @@ Ví dụ 2 (case kinh điển phân biệt với bài #349):
     Kết quả: [2, 2]   (bài #349 sẽ ra [2] vì chỉ lấy unique)
 
 
-[2] CÁC BƯỚC THUẬT TOÁN
-------------------------------------------------------------------------------
+## CÁC BƯỚC THUẬT TOÁN
 B1. Đảm bảo nums1 là mảng NHỎ hơn:
         Nếu len(nums1) > len(nums2): hoán đổi nums1, nums2
 
@@ -89,8 +92,7 @@ B3. Duyệt mảng lớn, thu hoạch:
     hàng để lấy.
 
 
-[3] COMPLEXITY
-------------------------------------------------------------------------------
+## COMPLEXITY
     - Time  : O(n + m)
               Đếm nums1 mất O(n), duyệt nums2 mất O(m). Mỗi phần tử được
               xử lý đúng 1 lần.
@@ -102,4 +104,5 @@ B3. Duyệt mảng lớn, thu hoạch:
         Brute force           : O(n*m) thời gian              - tệ nhất
         Sort + Two Pointers   : O(n log n + m log m)          - tốt khi đã sort
         Hash Map (Counter)    : O(n + m) thời gian, O(min)    - tốt nhất tổng quát
-==============================================================================
+
+</details>

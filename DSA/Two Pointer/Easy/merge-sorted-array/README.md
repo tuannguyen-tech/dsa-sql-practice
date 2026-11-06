@@ -1,10 +1,16 @@
-==============================================================================
-Problem: Merge Sorted Array
-Link: https://leetcode.com/problems/merge-sorted-array/description/?envType=problem-list-v2&envId=two-pointers
-Difficulty: Easy
-Topic: Array
-==============================================================================
-[1] Cách chạy thuật toán(mô tả trực quan)
+# Merge Sorted Array
+
+[LeetCode problem](https://leetcode.com/problems/merge-sorted-array/description/?envType=problem-list-v2&envId=two-pointers) | **Difficulty:** Easy  
+**Topics:** Array
+
+## Solution
+
+Xem lời giải Python tại [solution.py](solution.py).
+
+<details>
+<summary>Giải thích chi tiết</summary>
+
+## Cách chạy thuật toán(mô tả trực quan)
 vì mỗi mảng đã được sắp xếp và trong mảng nums1 ta còn thừa khoảng trống đằng sau vì vậy tôi nghĩ mình phải tận dụng chúng và tôi sẽ ghi kết quả từ cuối về đầu đều này giúp tôi tránh việc ghi đè lên dữ liệu thật chưa xử lý 
 bài toán cho 2 dãy số đã sắp xếp vì vậy tôi nghĩ  nếu tìm số lớn nhất của 2 mảng lần  lượt và đặt vào cuối thì chắc chắn số đó sẽ được sắp xếp
 
@@ -49,7 +55,7 @@ Lúc này j=-1 ta dừng vòng lặp
 
 Kết quả: nums1 =[1,2,2,3,5,6]
 
-[2] Các bước thuật toán
+## Các bước thuật toán
 B1. Khởi tạo 3 con trỏ:
         i <- m-1 (trỏ đến cuối phần dữ liệu thật cuae nums1)
         j <- n-1 (cuối nums2)
@@ -80,7 +86,8 @@ Lúc này i đã chạy hết nhưng các phần tử trong nums2 vẫn không �
 Lúc đó ta sẽ đổ các phần tử còn lại trong nums2  vào nums1  đến khi j >=0 từ k vị trí còn lại
 
 
-[3] complexity 
+## complexity 
 -Time complexity: O(N) - Vì mỗi phần tử trong mảng nums1 và nums2 chỉ được xét tối đa 1 lần
 -Space Complexuty:O(1) - Vì chỉ dùng 3 biến con trỏ i,j,k, không tạo mảng phụ.
-==============================================================================
+
+</details>

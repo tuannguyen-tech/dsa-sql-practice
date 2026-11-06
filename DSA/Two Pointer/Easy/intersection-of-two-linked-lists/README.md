@@ -1,10 +1,16 @@
-==============================================================================
-Problem: Intersection of Two Linked Lists
-Link: https://leetcode.com/problems/intersection-of-two-linked-lists/
-Difficulty: Easy
-Topic: Linked List, Two Pointers
-==============================================================================
-[1] Cách chạy thuật toán (mô tả trực quan)
+# Intersection of Two Linked Lists
+
+[LeetCode problem](https://leetcode.com/problems/intersection-of-two-linked-lists/) | **Difficulty:** Easy  
+**Topics:** Linked List, Two Pointers
+
+## Solution
+
+Xem lời giải Python tại [solution.py](solution.py).
+
+<details>
+<summary>Giải thích chi tiết</summary>
+
+## Cách chạy thuật toán (mô tả trực quan)
 
   🎯 Ý TƯỞNG GỐC: "Hai cuộn phim dán vào nhau"
 
@@ -80,7 +86,7 @@ Topic: Linked List, Two Pointers
   Chỉ 5 dòng code, không bug. Đó là lý do nó là lời giải thanh lịch nhất.
 
 
-[2] Các bước thuật toán
+## Các bước thuật toán
 
   B1. Khởi tạo 2 con trỏ:
         pa <- headA
@@ -126,7 +132,8 @@ Topic: Linked List, Two Pointers
    lệch 1 đơn vị). Cách "nhảy list" gọn hơn, ít bug hơn)
 
 
-[3] complexity
+## complexity
   -Time complexity: O(m + n) - Mỗi con trỏ đi tối đa m+n bước
   -Space complexity: O(1) - Chỉ dùng 2 biến con trỏ pa, pb, không mảng phụ
-==============================================================================
+
+</details>

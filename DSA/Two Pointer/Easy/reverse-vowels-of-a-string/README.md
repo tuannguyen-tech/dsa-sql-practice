@@ -1,12 +1,16 @@
-==============================================================================
-Problem: Reverse Vowels of a String
-Link: https://leetcode.com/problems/reverse-vowels-of-a-string/description/
-Difficulty: Easy
-Topic: Two Pointers, String
-==============================================================================
+# Reverse Vowels of a String
 
-[1] CÁCH CHẠY THUẬT TOÁN (MÔ TẢ TRỰC QUAN)
-------------------------------------------------------------------------------
+[LeetCode problem](https://leetcode.com/problems/reverse-vowels-of-a-string/description/) | **Difficulty:** Easy  
+**Topics:** Two Pointers, String
+
+## Solution
+
+Xem lời giải Python tại [solution.py](solution.py).
+
+<details>
+<summary>Giải thích chi tiết</summary>
+
+## CÁCH CHẠY THUẬT TOÁN (MÔ TẢ TRỰC QUAN)
 Ý tưởng: Đảo ngược CHỈ các nguyên âm, giữ nguyên mọi ký tự khác.
 Ta tưởng tượng chuỗi là dãy ghế, mỗi ghế ngồi một ký tự. Ta CHỈ đổi chỗ những
 "người" là nguyên âm, phụ âm thì đứng yên tại ghế của mình.
@@ -58,8 +62,7 @@ Ví dụ 2: s = "bcaa"  (test case hay bị sai!)
     Đây chính là lỗi phổ biến nhất ở bài này.
 
 
-[2] CÁC BƯỚC THUẬT TOÁN
-------------------------------------------------------------------------------
+## CÁC BƯỚC THUẬT TOÁN
 B1. Chuẩn bị:
         chars  <- list(s)              (Python: str bất biến -> phải chuyển list)
         vowels <- set("aeiouAEIOU")    (tra cứu O(1), gồm cả hoa & thường)
@@ -101,12 +104,12 @@ B3. Trả về "".join(chars).
     trên string/char[] -> O(1) tuyệt đối.
 
 
-[3] COMPLEXITY
-------------------------------------------------------------------------------
+## COMPLEXITY
     - Time  : O(n)
               Mỗi ký tự bị con trỏ left HOẶC right quét qua TỐI ĐA 1 lần.
               Tổng số bước nhích của cả hai con trỏ <= n.
     - Space : O(n) trong Python (do list(s) bắt buộc)
               O(1) nếu xét thuần thuật toán, hoặc O(1) tuyệt đối nếu ngôn ngữ
               cho phép sửa chuỗi tại chỗ.
-==============================================================================
+
+</details>

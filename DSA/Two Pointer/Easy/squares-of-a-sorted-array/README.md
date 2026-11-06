@@ -1,12 +1,16 @@
-==============================================================================
-Problem: Squares of a Sorted Array
-Link: https://leetcode.com/problems/squares-of-a-sorted-array/description/
-Difficulty: Easy
-Topic: Array, Two Pointers, Sorting
-==============================================================================
+# Squares of a Sorted Array
 
-[1] CÁCH CHẠY THUẬT TOÁN (MÔ TẢ TRỰC QUAN)
-------------------------------------------------------------------------------
+[LeetCode problem](https://leetcode.com/problems/squares-of-a-sorted-array/description/) | **Difficulty:** Easy  
+**Topics:** Array, Two Pointers, Sorting
+
+## Solution
+
+Xem lời giải Python tại [`solution.py`](solution.py).
+
+<details>
+<summary>Giải thích chi tiết</summary>
+
+## Cách chạy thuật toán (mô tả trực quan)
 Ý tưởng: Mảng đã sắp xếp tăng dần, nhưng bình phương lên thì KHÔNG còn tăng
 nữa — vì số âm lớn (đầu mảng) bình phương thành số dương lớn. Kết quả có
 dạng "chữ V": lớn ở hai đầu, nhỏ ở giữa. Ta lấp đầy mảng kết quả từ CUỐI
@@ -73,8 +77,7 @@ Ví dụ 4 (mảng toàn dương): nums = [1, 4, 9]
     Tương tự, luôn chọn bên phải (vì bên phải lớn hơn) → res = [1, 16, 81] ✅
 
 
-[2] CÁC BƯỚC THUẬT TOÁN
-------------------------------------------------------------------------------
+## Các bước thuật toán
 B1. Khởi tạo mảng kết quả và hai con trỏ:
         res   <- [0] * len(nums)
         left  <- 0
@@ -128,8 +131,7 @@ B3. Trả về res.
     Không có trường hợp truy cập ngoài mảng.
 
 
-[3] TẠI SAO CHỌN BÊN NÀO THÌ NHÍCH CON TRỎ BÊN ĐÓ?
-------------------------------------------------------------------------------
+## Tại sao chọn bên nào thì nhích con trỏ bên đó?
 Đây là CÂU HỎI CỐT LÕI của mọi thuật toán two-pointer. Có 3 góc nhìn.
 
 --- Góc nhìn 1: "Cái xô nước" — mỗi con trỏ là "cái nắp" ---------------------
@@ -257,8 +259,7 @@ B3. Trả về res.
     ... tiếp tục cho đến khi left > right → vùng rỗng → xong.
 
 
-[4] COMPLEXITY
-------------------------------------------------------------------------------
+## Độ phức tạp
     - Time  : O(n)
               Vòng lặp chạy đúng n lần (mỗi lần tiêu thụ 1 phần tử từ trái
               hoặc phải). Mỗi lần chỉ có phép so sánh abs, bình phương, gán
@@ -277,4 +278,4 @@ B3. Trả về res.
                                             - tối ưu nhất, code ngắn, ít bug
 
     Follow-up của đề: "Tìm giải pháp O(n)" — cách này đáp ứng đúng yêu cầu.
-==============================================================================
+</details>

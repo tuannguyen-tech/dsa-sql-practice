@@ -1,12 +1,16 @@
-==============================================================================
-Problem: Reverse String II
-Link: https://leetcode.com/problems/reverse-string-ii/description/
-Difficulty: Easy
-Topic: Two Pointers, String
-==============================================================================
+# Reverse String II
 
-[1] CÁCH CHẠY THUẬT TOÁN (MÔ TẢ TRỰC QUAN)
-------------------------------------------------------------------------------
+[LeetCode problem](https://leetcode.com/problems/reverse-string-ii/description/) | **Difficulty:** Easy  
+**Topics:** Two Pointers, String
+
+## Solution
+
+Xem lời giải Python tại [solution.py](solution.py).
+
+<details>
+<summary>Giải thích chi tiết</summary>
+
+## CÁCH CHẠY THUẬT TOÁN (MÔ TẢ TRỰC QUAN)
 Ý tưởng: Chia chuỗi thành từng CỤM 2k ký tự. Trong mỗi cụm, đảo ngược k
 ký tự ĐẦU, giữ nguyên k ký tự SAU. Cụm cuối nếu thiếu thì linh động xử lý.
 
@@ -65,8 +69,7 @@ Ví dụ 3 (case "nhiều cụm" - quan trọng nhất):
     Kết quả: "bacdfegh"   (2 cụm đầy đủ)
 
 
-[2] CÁC BƯỚC THUẬT TOÁN
-------------------------------------------------------------------------------
+## CÁC BƯỚC THUẬT TOÁN
 B1. Chuyển chuỗi thành list (vì string trong Python bất biến):
         char <- list(s)
 
@@ -109,8 +112,7 @@ B3. Ghép list lại thành chuỗi:
     - quan trọng vì ta đang gán đè lên chính slice đó).
 
 
-[3] COMPLEXITY
-------------------------------------------------------------------------------
+## COMPLEXITY
     - Time  : O(n)
               Mỗi ký tự được "chạm" đúng 1 lần trong suốt quá trình (mỗi
               cụm đảo k ký tự, cộng lại = n ký tự). join(char) cũng O(n).
@@ -129,4 +131,5 @@ B3. Ghép list lại thành chuỗi:
                                       nhưng code dài hơn
         For + Slicing (cách này)    : O(n), O(n) space - NGẮN NHẤT, ít lỗi
                                       nhất, tự xử lý mọi edge case
-==============================================================================
+
+</details>

@@ -1,10 +1,16 @@
-==============================================================================
-Problem: Linked List Cycle
-Link: https://leetcode.com/problems/linked-list-cycle/description/
-Difficulty: Easy
-Topic: Linked List, Two Pointers
-==============================================================================
-[1] Cách chạy thuật toán (mô tả trực quan)
+# Linked List Cycle
+
+[LeetCode problem](https://leetcode.com/problems/linked-list-cycle/description/) | **Difficulty:** Easy  
+**Topics:** Linked List, Two Pointers
+
+## Solution
+
+Xem lời giải Python tại [solution.py](solution.py).
+
+<details>
+<summary>Giải thích chi tiết</summary>
+
+## Cách chạy thuật toán (mô tả trực quan)
 vì danh sách liên kết chỉ có thể đi một chiều theo con trỏ next và không thể lùi lại
 nên tôi nghĩ mình không thể lưu các nút đã thăm (sẽ tốn O(N) bộ nhớ)
 và tôi nghĩ đến việc dùng 2 con trỏ với tốc độ khác nhau để "tự phát hiện" vòng tròn
@@ -53,7 +59,7 @@ B1: slow=1->2, fast=1->3
 B2: fast.next = null => dừng while
     => return False (không có chu trình)
 
-[2] Các bước thuật toán
+## Các bước thuật toán
 B1. Khởi tạo 2 con trỏ:
         slow <- head (rùa, đi 1 bước)
         fast <- head (thỏ, đi 2 bước)
@@ -79,7 +85,8 @@ B3. Nếu thoát vòng lặp (fast hoặc fast.next là null):
  nhảy cóc qua slow. Nếu cho fast đi 3, hiệu tốc độ = 2, thì trong một số trường hợp
  (vd chu trình độ dài chẵn) fast có thể nhảy qua slow mãi mà không bao giờ trùng)
 
-[3] complexity
+## complexity
 -Time complexity: O(N) - Vì mỗi nút được slow đi qua tối đa 1 lần
 -Space complexity: O(1) - Vì chỉ dùng 2 biến con trỏ slow, fast, không tạo mảng phụ.
-==============================================================================
+
+</details>
