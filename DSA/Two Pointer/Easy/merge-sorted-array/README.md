@@ -1,4 +1,3 @@
-"""
 ==============================================================================
 Problem: Merge Sorted Array
 Link: https://leetcode.com/problems/merge-sorted-array/description/?envType=problem-list-v2&envId=two-pointers
@@ -85,26 +84,3 @@ Lúc đó ta sẽ đổ các phần tử còn lại trong nums2  vào nums1  đ�
 -Time complexity: O(N) - Vì mỗi phần tử trong mảng nums1 và nums2 chỉ được xét tối đa 1 lần
 -Space Complexuty:O(1) - Vì chỉ dùng 3 biến con trỏ i,j,k, không tạo mảng phụ.
 ==============================================================================
-"""
-
-def merge(num1,m,num2,n):
-    i = m -1
-    j = n-1
-    k = m+n-1
-
-    while j>=0:
-        if i>=0 and num1[i] > num2[j]:
-            num1[k] = num1[i]
-            i-=1
-        else:
-            num1[k] = num2[j]
-            j-=1
-
-        k-=1
-
-    return num1
-# ---test cases ---
-if __name__ == '__main__':
-    print(merge([1,2,3,0,0,0],3,[2,5,6],3))
-
-
