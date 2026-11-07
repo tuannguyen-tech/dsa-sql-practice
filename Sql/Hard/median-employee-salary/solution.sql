@@ -1,22 +1,12 @@
-WITH ranked AS (
+WITH ranked_salary AS (
     SELECT
         id,
         company,
         salary,
-        ROW_NUMBER() OVER (
-            PARTITION BY company
-            ORDER BY salary, id
-        ) AS rn,
-        COUNT(*) OVER (PARTITION BY company) AS cnt
+        ROW_NUMBER() OVER (PARTITION BY company ORDER BY salary, id) AS row_num,
+        COUNT(*)     OVER (PARTITION BY company)                     AS total_employees
     FROM Employee
 )
-SELECT
-    id,
-    company,
-    salary
-FROM ranked
-WHERE
-    (cnt % 2 = 1 AND rn = (cnt + 1) / 2)
-    OR
-    (cnt % 2 = 0 AND rn IN (cnt / 2, cnt / 2 + 1))
-ORDER BY company, salary;
+SELECT id, company, salary
+FROM ranked_salary
+WHERE row_num BETWEEN total_employees / 2.0 AND total_employees / 2.0 + 1;
