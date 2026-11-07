@@ -83,5 +83,3 @@ Việc bổ sung thêm cột `id` vào mệnh đề sắp xếp (`ORDER BY salar
 3\. Bản chất của toán tử `BETWEEN` trong SQL
 
 Công thức này hoạt động được nhờ đặc tính lấy cả hai đầu mút (`>=` và `<=`) của mệnh đề `BETWEEN`.
-
-Nếu thay thế bằng dấu lớn hơn/nhỏ hơn thông thường (`>` và `<`), trường hợp tổng nhân viên chẵn sẽ bị mất dữ liệu ở hai đầu mút.
